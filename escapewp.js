@@ -66,7 +66,7 @@ async function organizePosts() {
             let date = `date: "${story.date}"`;
             let mp3 = `mp3: "${story.enclosure.split("\n")[0].trim()}"`;
             let slug = `permalink: "/${story.slug}/"`;
-            let excerpt = `excerpt: "${story.excerpt.rendered.trim().replace(/(<([^>]+)>)/ig, '')}"`;
+            let excerpt = `excerpt: "${story.excerpt.rendered.trim().replace(/(<([^>]+)>)/ig, '').replaceAll('\0', '')}"`;
             let content = story.content.rendered;
 
             const turndownService = new TurndownService();
