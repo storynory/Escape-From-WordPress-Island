@@ -1,0 +1,15 @@
+{
+  "name": "escape-from-wp-hell",
+  "type": "module",
+  "dependencies": {
+    "fs-extra": "^11.1.1",
+    "jsdom": "^22.0.0",
+    "node-fetch": "^3.3.1",
+    "path": "^0.12.7",
+    "sharp": "^0.32.1",
+    "turndown": "^7.1.2"
+  },
+  "scripts": {
+    "escape": "node escapewp.js"
+  }
+}
