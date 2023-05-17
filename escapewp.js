@@ -38,11 +38,12 @@ function addImageDimensions(turndownService) {
       const src = node.getAttribute('src');
       const width = node.getAttribute('width');
       const height = node.getAttribute('height');
-      const dimensions = width && height ? ` {width="${width}" height="${height}"}` : '';
+      const dimensions = width && height ? `{width="${width}" height="${height}"}` : '';
       return `![${alt}](${src}${dimensions})`;
     },
   });
 }
+
 
 async function organizePosts() {
   try {
